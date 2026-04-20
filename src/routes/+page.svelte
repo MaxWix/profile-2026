@@ -305,7 +305,7 @@
 
 			<a
 				class="case-card"
-				href="/work/case-3"
+				href="#"
 				on:mouseenter={() => (activeCard = 'case3')}
 				on:mouseleave={() => (activeCard = null)}
 			>
