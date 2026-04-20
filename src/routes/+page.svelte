@@ -87,7 +87,7 @@
 	});
 </script>
 
-<!-- <IntroLoader /> -->
+<IntroLoader />
 
 <div class="grain"></div>
 <div class="progress-bar" id="progress"></div>
