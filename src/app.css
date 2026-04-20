@@ -1,0 +1,21 @@
+:root {
+	--sand: #f5efe0;
+	--clay: #c4956a;
+	--bark: #7a5c3e;
+	--moss: #6b7c5e;
+	--stone: #9e9285;
+	--ink: #2e2a24;
+	--cream: #faf6ee;
+	--warm-white: #fdfaf4;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	background: var(--warm-white);
+	font-family: 'Lora', Georgia, serif;
+	color: var(--ink);
+	overflow-x: hidden;
+}
