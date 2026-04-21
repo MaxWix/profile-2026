@@ -1,6 +1,16 @@
 <script>
 	import { onMount } from 'svelte';
 
+	const solutionImages = [
+		{ src: '/kims/kimsPersona1.jpg' },
+		{ src: '/kims/kimsPersona2.jpg' },
+		{ src: '/kims/kimsPersona3.jpg' }
+	];
+
+	let selectedIndex = 0;
+	let selectedSolution = solutionImages[0].src;
+	let selectedCaption = solutionImages[0].caption;
+
 	onMount(() => {
 		const sections = document.querySelectorAll('.cs-section');
 		const progress = document.getElementById('progress');
@@ -38,7 +48,7 @@
 
 <!-- ─── HERO ─── -->
 <header class="case-hero">
-	<div class="hero-bg-text">Kim's</div>
+	<div class="hero-bg-text">Kim's Dragon</div>
 	<div class="hero-content">
 		<div class="case-tag">
 			<span class="tag-pill ux">UX / UI Design</span>
@@ -95,9 +105,8 @@
 			customers already loved.
 		</p>
 
-		<div class="img-placeholder tall">
-			<span class="placeholder-icon">⌗</span>
-			<span class="placeholder-label">Kim's Dragon — project goals & context</span>
+		<div class="case-img-wrap">
+			<img src="/kims/kimsGoals.jpg" alt="Kims Dragon Project Goals" class="case-img" />
 		</div>
 	</section>
 
@@ -162,18 +171,52 @@
 			worker, and the casual walk-up customer.
 		</p>
 
-		<div class="img-grid-3">
-			<div class="img-placeholder medium">
-				<span class="placeholder-icon">◉</span>
-				<span class="placeholder-label">User persona 01</span>
+		<div class="solution-gallery">
+			<div class="gallery-main">
+				<button
+					class="gallery-arrow gallery-arrow--prev"
+					on:click={() => {
+						selectedIndex = (selectedIndex - 1 + solutionImages.length) % solutionImages.length;
+						selectedSolution = solutionImages[selectedIndex].src;
+						selectedCaption = solutionImages[selectedIndex].caption;
+					}}
+					aria-label="Previous image">←</button
+				>
+
+				<div class="case-img-wrap gallery-img-wrap">
+					<img
+						src={selectedSolution}
+						alt="Selected leaderboard screen"
+						class="case-img main-solution-img"
+					/>
+					<span class="case-img-caption">{selectedCaption}</span>
+				</div>
+
+				<button
+					class="gallery-arrow gallery-arrow--next"
+					on:click={() => {
+						selectedIndex = (selectedIndex + 1) % solutionImages.length;
+						selectedSolution = solutionImages[selectedIndex].src;
+						selectedCaption = solutionImages[selectedIndex].caption;
+					}}
+					aria-label="Next image">→</button
+				>
 			</div>
-			<div class="img-placeholder medium">
-				<span class="placeholder-icon">◉</span>
-				<span class="placeholder-label">User persona 02</span>
-			</div>
-			<div class="img-placeholder medium">
-				<span class="placeholder-icon">◉</span>
-				<span class="placeholder-label">User persona 03</span>
+
+			<div class="img-grid-3 solution-thumbs">
+				{#each solutionImages as img, i}
+					<button
+						class="thumb-btn"
+						class:active={selectedIndex === i}
+						on:click={() => {
+							selectedIndex = i;
+							selectedSolution = img.src;
+							selectedCaption = img.caption;
+						}}
+					>
+						<img src={img.src} alt={img.caption} class="thumb-img" />
+					</button>
+				{/each}
 			</div>
 		</div>
 
@@ -183,9 +226,12 @@
 			illuminated exactly where frustration peaked and where a mobile solution could intervene.
 		</p>
 
-		<div class="img-placeholder medium">
-			<span class="placeholder-icon">⊞</span>
-			<span class="placeholder-label">User journey map — Sarah Parker</span>
+		<div class="case-img-wrap">
+			<img
+				src="/kims/userJourney.png"
+				alt="Sarah Parker user journey map, showing her emotions and actions throughout the ordering process at Kim's Dragon"
+				class="case-img"
+			/>
 		</div>
 	</section>
 
@@ -207,15 +253,13 @@
 			to create a real testing environment.
 		</p>
 
-		<div class="img-grid-2">
-			<div class="img-placeholder medium">
-				<span class="placeholder-icon">◈</span>
-				<span class="placeholder-label">Design sketches</span>
-			</div>
-			<div class="img-placeholder medium">
-				<span class="placeholder-icon">◈</span>
-				<span class="placeholder-label">Low-fi prototype screens</span>
-			</div>
+		<div class="case-img-wrap">
+			<img
+				src="/kims/lowFiProto.jpg"
+				alt="Screenshots of the low-fidelity prototype"
+				class="case-img"
+			/>
+			<span class="case-img-caption">Low Fidelity Prototype</span>
 		</div>
 
 		<div class="section-sub-label">Testing takeaways</div>
@@ -266,9 +310,13 @@
 			iconography. This was when the harder design problems started to surface.
 		</p>
 
-		<div class="img-placeholder tall">
-			<span class="placeholder-icon">⌗</span>
-			<span class="placeholder-label">Mid-fi prototype screens</span>
+		<div class="case-img-wrap">
+			<img
+				src="/kims/midFiProto.jpg"
+				alt="Screenshots of the mid-fidelity prototype"
+				class="case-img"
+			/>
+			<span class="case-img-caption">Mid Fidelity Prototype</span>
 		</div>
 
 		<div class="section-sub-label">Testing takeaways</div>
@@ -332,9 +380,13 @@
 			and guide users through critical moments.
 		</p>
 
-		<div class="img-placeholder tall">
-			<span class="placeholder-icon">⌗</span>
-			<span class="placeholder-label">High-fi prototype — final screens</span>
+		<div class="case-img-wrap">
+			<img
+				src="/kims/hiFiProto.jpg"
+				alt="Screenshots of the high-fidelity prototype"
+				class="case-img"
+			/>
+			<span class="case-img-caption">High Fidelity Prototype</span>
 		</div>
 
 		<div class="section-sub-label">Final testing takeaways</div>
@@ -422,11 +474,6 @@
 			earn the personality by getting the fundamentals right first. By the end of the term, we had
 			both.
 		</p>
-
-		<div class="img-placeholder medium">
-			<span class="placeholder-icon">⌗</span>
-			<span class="placeholder-label">Final product mockup</span>
-		</div>
 	</section>
 </div>
 
@@ -1004,6 +1051,140 @@
 		}
 		.next-project {
 			padding: 60px 20px;
+		}
+	}
+
+	.case-img-wrap {
+		margin: 36px 0;
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+		max-height: 600px;
+		overflow: hidden;
+		border-radius: 8px;
+	}
+
+	.case-img {
+		width: 100%;
+		border-radius: 8px;
+		display: block;
+		border: 1.5px solid var(--light-stone);
+		object-fit: cover;
+	}
+
+	.case-img-caption {
+		font-family: 'Caveat', cursive;
+		font-size: 14px;
+		color: var(--stone);
+		text-align: center;
+		letter-spacing: 0.3px;
+	}
+
+	/* ─── SOLUTION IMAGE GALLERY ─── */
+	.main-solution-img {
+		transition: opacity 0.2s ease;
+	}
+
+	.solution-thumbs {
+		margin-top: 12px;
+	}
+
+	.thumb-btn {
+		display: block;
+		width: 100%;
+		padding: 0;
+		background: none;
+		border: 2px solid transparent;
+		border-radius: 8px;
+		cursor: pointer;
+		overflow: hidden;
+		transition:
+			border-color 0.2s ease,
+			transform 0.2s ease;
+	}
+
+	.thumb-btn:hover {
+		transform: translateY(-2px);
+		border-color: var(--stone);
+	}
+
+	.thumb-btn.active {
+		border-color: var(--clay);
+	}
+
+	.thumb-img {
+		width: 100%;
+		display: block;
+		border-radius: 6px;
+		opacity: 0.7;
+		transition: opacity 0.2s ease;
+	}
+
+	.thumb-btn.active .thumb-img,
+	.thumb-btn:hover .thumb-img {
+		opacity: 1;
+	}
+
+	.img-grid-3 {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		gap: 14px;
+		margin: 36px 0;
+	}
+
+	/* ─── GALLERY ARROWS ─── */
+	.solution-gallery {
+		margin: 36px 0;
+	}
+
+	.gallery-main {
+		display: grid;
+		grid-template-columns: 40px 1fr 40px;
+		align-items: center;
+		gap: 12px;
+	}
+
+	.gallery-img-wrap {
+		margin: 0;
+	}
+
+	.gallery-arrow {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 36px;
+		height: 36px;
+		border-radius: 50%;
+		border: 1.5px solid var(--light-stone);
+		background: var(--cream);
+		font-family: 'Caveat', cursive;
+		font-size: 18px;
+		color: var(--stone);
+		cursor: pointer;
+		transition: all 0.2s ease;
+		flex-shrink: 0;
+		align-self: center;
+	}
+
+	.gallery-arrow:hover {
+		border-color: var(--clay);
+		color: var(--clay);
+		transform: scale(1.1);
+	}
+
+	.solution-thumbs {
+		margin-top: 12px;
+	}
+
+	@media (max-width: 700px) {
+		.gallery-main {
+			grid-template-columns: 32px 1fr 32px;
+			gap: 8px;
+		}
+		.gallery-arrow {
+			width: 28px;
+			height: 28px;
+			font-size: 14px;
 		}
 	}
 </style>

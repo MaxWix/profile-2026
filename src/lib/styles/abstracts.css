@@ -1,0 +1,266 @@
+/* ═══════════════════════════════════════════════════════════════
+   ABSTRACTS — Global Design Tokens
+   Max Wix Portfolio · 2026
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ─── COLOR PALETTE ─────────────────────────────────────────── */
+:root {
+	/* Core palette */
+	--sand: #f5efe0;
+	--clay: #c4956a;
+	--bark: #7a5c3e;
+	--moss: #6b7c5e;
+	--stone: #9e9285;
+	--ink: #2e2a24;
+	--cream: #faf6ee;
+	--warm-white: #fdfaf4;
+	--terracotta: #b85c38;
+	--sage: #a3b89a;
+	--light-stone: #ede8df;
+
+	/* Semantic aliases */
+	--color-bg: var(--warm-white);
+	--color-surface: var(--cream);
+	--color-surface-alt: var(--sand);
+	--color-border: var(--light-stone);
+	--color-border-accent: var(--clay);
+
+	--color-text-primary: var(--ink);
+	--color-text-secondary: #4a4440;
+	--color-text-muted: var(--stone);
+	--color-text-accent: var(--clay);
+
+	--color-accent-primary: var(--clay);
+	--color-accent-secondary: var(--bark);
+	--color-accent-tertiary: var(--moss);
+
+	--color-dark-bg: var(--ink);
+	--color-dark-text: var(--sand);
+	--color-dark-muted: #b0a89e;
+}
+
+/* ─── TYPOGRAPHY SCALE ───────────────────────────────────────
+   Augmented Fourth (ratio: 1.414)
+   Base: 16px = 1rem
+
+   Step  │ rem     │ px (approx)
+   ──────┼─────────┼────────────
+   h1    │ 7.993   │ 127.9
+   h2    │ 5.653   │  90.4
+   h3    │ 3.998   │  64.0
+   h4    │ 2.827   │  45.2
+   h5    │ 1.999   │  32.0
+   h6    │ 1.414   │  22.6
+   p     │ 1.000   │  16.0
+   small │ 0.707   │  11.3
+   ─────────────────────────── */
+
+:root {
+	--font-serif: 'Lora', Georgia, serif;
+	--font-hand: 'Caveat', cursive;
+
+	/* Scale steps */
+	--text-h1: 7.993rem;
+	--text-h2: 5.653rem;
+	--text-h3: 3.998rem;
+	--text-h4: 2.827rem;
+	--text-h5: 1.999rem;
+	--text-h6: 1.414rem;
+	--text-base: 1rem;
+	--text-small: 0.707rem;
+
+	/* Line heights */
+	--leading-tight: 1.1;
+	--leading-snug: 1.2;
+	--leading-normal: 1.5;
+	--leading-relaxed: 1.75;
+	--leading-loose: 1.85;
+
+	/* Letter spacing */
+	--tracking-tight: -0.5px;
+	--tracking-normal: 0;
+	--tracking-wide: 0.5px;
+	--tracking-wider: 1.5px;
+	--tracking-widest: 2px;
+
+	/* Font weights */
+	--weight-normal: 400;
+	--weight-medium: 500;
+	--weight-semi: 600;
+}
+
+/* ─── BASE ELEMENT RESETS ────────────────────────────────────── */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size: 16px; /* base for rem calculations */
+	scroll-behavior: smooth;
+}
+
+body {
+	background-color: var(--color-bg);
+	font-family: var(--font-serif);
+	font-size: var(--text-base);
+	font-weight: var(--weight-normal);
+	color: var(--color-text-primary);
+	line-height: var(--leading-loose);
+	overflow-x: hidden;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+/* ─── HEADING DEFAULTS ───────────────────────────────────────── */
+h1 {
+	font-size: var(--text-h1);
+	line-height: var(--leading-tight);
+	letter-spacing: -2px;
+	font-weight: var(--weight-normal);
+}
+h2 {
+	font-size: var(--text-h2);
+	line-height: var(--leading-snug);
+	letter-spacing: var(--tracking-tight);
+	font-weight: var(--weight-normal);
+}
+h3 {
+	font-size: var(--text-h3);
+	line-height: var(--leading-snug);
+	letter-spacing: var(--tracking-tight);
+	font-weight: var(--weight-normal);
+}
+h4 {
+	font-size: var(--text-h4);
+	line-height: var(--leading-normal);
+	letter-spacing: var(--tracking-tight);
+	font-weight: var(--weight-normal);
+}
+h5 {
+	font-size: var(--text-h5);
+	line-height: var(--leading-normal);
+	letter-spacing: var(--tracking-normal);
+	font-weight: var(--weight-normal);
+}
+h6 {
+	font-size: var(--text-h6);
+	line-height: var(--leading-normal);
+	letter-spacing: var(--tracking-wide);
+	font-weight: var(--weight-normal);
+}
+
+p {
+	font-size: var(--text-base);
+	line-height: var(--leading-loose);
+}
+
+small,
+.text-small {
+	font-size: var(--text-small);
+	line-height: var(--leading-normal);
+}
+
+/* Caveat / handwritten label utility */
+.label {
+	font-family: var(--font-hand);
+	font-size: var(--text-small);
+	letter-spacing: var(--tracking-wider);
+	text-transform: uppercase;
+}
+
+/* ─── SPACING SCALE ─────────────────────────────────────────── */
+/* Built on base-8 with a few extras for fine-tuning           */
+:root {
+	--space-1: 4px;
+	--space-2: 8px;
+	--space-3: 12px;
+	--space-4: 16px;
+	--space-5: 20px;
+	--space-6: 24px;
+	--space-8: 32px;
+	--space-10: 40px;
+	--space-12: 48px;
+	--space-16: 64px;
+	--space-20: 80px;
+	--space-24: 96px;
+	--space-32: 128px;
+}
+
+/* ─── BORDER RADIUS ─────────────────────────────────────────── */
+:root {
+	--radius-sm: 4px;
+	--radius-md: 6px;
+	--radius-lg: 8px;
+	--radius-xl: 12px;
+	--radius-full: 100px;
+}
+
+/* ─── SHADOWS ───────────────────────────────────────────────── */
+:root {
+	--shadow-sm: 0 2px 8px rgba(46, 42, 36, 0.06);
+	--shadow-md: 0 8px 24px rgba(46, 42, 36, 0.08);
+	--shadow-lg: 0 16px 48px rgba(46, 42, 36, 0.1);
+}
+
+/* ─── TRANSITIONS ───────────────────────────────────────────── */
+:root {
+	--ease-default: 0.25s ease;
+	--ease-slow: 0.4s ease;
+	--ease-spring: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ─── Z-INDEX LAYERS ────────────────────────────────────────── */
+:root {
+	--z-base: 1;
+	--z-raised: 10;
+	--z-nav: 50;
+	--z-header: 90;
+	--z-overlay: 85;
+	--z-progress: 100;
+	--z-grain: 200;
+}
+
+/* ─── LAYOUT ────────────────────────────────────────────────── */
+:root {
+	--max-width-content: 680px;
+	--max-width-wide: 860px;
+	--max-width-full: 960px;
+	--header-height: 68px;
+}
+
+/* ─── BREAKPOINTS (reference — use in media queries) ────────── */
+/*
+  sm:  600px
+  md:  700px
+  lg:  900px
+  xl: 1200px
+*/
+
+/* ─── RESPONSIVE TYPE SCALE ─────────────────────────────────── */
+/* Tablet (≤ 900px): one step down the scale                    */
+@media (max-width: 900px) {
+	:root {
+		--text-h1: 5.653rem; /* was 7.993 → drop to h2 size  */
+		--text-h2: 3.998rem; /* was 5.653 → drop to h3 size  */
+		--text-h3: 2.827rem; /* was 3.998 → drop to h4 size  */
+		--text-h4: 1.999rem; /* was 2.827 → drop to h5 size  */
+		--text-h5: 1.414rem; /* was 1.999 → drop to h6 size  */
+		--text-h6: 1.125rem; /* was 1.414 → midpoint         */
+	}
+}
+
+/* Mobile (≤ 600px): two steps down the scale                   */
+@media (max-width: 600px) {
+	:root {
+		--text-h1: 3.998rem; /* was 7.993 → drop to h3 size  */
+		--text-h2: 2.827rem; /* was 5.653 → drop to h4 size  */
+		--text-h3: 1.999rem; /* was 3.998 → drop to h5 size  */
+		--text-h4: 1.414rem; /* was 2.827 → drop to h6 size  */
+		--text-h5: 1.125rem; /* was 1.999 → midpoint         */
+		--text-h6: 1rem; /* was 1.414 → base size        */
+	}
+}

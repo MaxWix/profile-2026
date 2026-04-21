@@ -547,9 +547,15 @@
 		</div>
 		<h2>50 users and counting. Real behavior.<br />The proof is in the pudding.</h2>
 		<p class="body-text">
-			After building a confident prototype we shipped a live MVP web-app. 40 users used it regularly
-			— including us. This was an opportunity to surface behavioral patterns that prototype testing
-			simply can't unearth.
+			After building a confident prototype we shipped a live MVP web-app. After having a confident
+			prototype we moved on to build a live MVP web-app for loam. We built the app using Svelte,
+			SCSS, and nodeJS. We used Supabase for our database, Cloudinary for image transformation and
+			storage, and Resend for communication with users.
+		</p>
+		<br />
+		<p class="bod-text">
+			40 users used it regularly — including us. This was an opportunity to surface behavioral
+			patterns that prototype testing simply can't unearth.
 		</p>
 
 		<div class="case-img-wrap">

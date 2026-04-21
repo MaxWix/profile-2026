@@ -24,7 +24,7 @@
 
 <header class="site-header">
 	<div class="header-left">
-		<span class="header-name">Max Wix</span>
+		<button class="header-name" onclick={() => scrollTo('s0')}>Max Wix</button>
 	</div>
 
 	<span class="header-roles">
@@ -124,6 +124,9 @@
 		font-weight: 500;
 		color: var(--ink);
 		letter-spacing: -0.2px;
+		background: none;
+		border: none;
+		cursor: pointer;
 	}
 
 	.header-roles {
