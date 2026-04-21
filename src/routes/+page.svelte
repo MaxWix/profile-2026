@@ -48,7 +48,7 @@
 					}
 				});
 			},
-			{ threshold: 0.4 }
+			{ threshold: 0.1 }
 		);
 
 		sections.forEach((s) => observer.observe(s));
@@ -87,17 +87,16 @@
 	});
 </script>
 
-<IntroLoader />
+<!-- <IntroLoader /> -->
 
 <div class="grain"></div>
 <div class="progress-bar" id="progress"></div>
 
 <nav class="side-nav" id="sideNav">
 	<button class="nav-dot active" data-section="0" aria-label="Hero"></button>
-	<button class="nav-dot" data-section="1" aria-label="Builder"></button>
-	<button class="nav-dot" data-section="2" aria-label="Curiosity"></button>
-	<button class="nav-dot" data-section="3" aria-label="Philosophy"></button>
-	<button class="nav-dot" data-section="4" aria-label="Work"></button>
+	<button class="nav-dot" data-section="1" aria-label="Work"></button>
+	<button class="nav-dot" data-section="2" aria-label="About"></button>
+	<button class="nav-dot" data-section="3" aria-label="Experience"></button>
 </nav>
 
 <!-- 01 HERO -->
@@ -159,24 +158,6 @@
 				stroke-linejoin="round"
 			/>
 		</svg>
-	</div>
-</section>
-
-<!-- 02 BUILDER -->
-<section class="section builder" id="s1">
-	<div class="section-inner">
-		<!-- <span class="chapter-num">01</span> -->
-		<div class="section-label">Belief</div>
-		<h2>Building is core<br />to <span class="hand-underline">humanity</span>.</h2>
-		<div class="flipbook-zone">
-			<span class="flipbook-label">✦ flipbook animation here</span>
-		</div>
-		<p class="body-text">
-			I believe everyone is a builder in some way, shape, or form. I love learning about people's
-			passions and how they build to support their ideas. Even more, I love building to support what <em
-				>I</em
-			> believe in.
-		</p>
 	</div>
 </section>
 
@@ -326,10 +307,23 @@
 <!-- 04 PHILOSOPHY -->
 <section class="section philosophy" id="s3">
 	<div class="section-inner">
-		<h2>Being a builder in tech<br />means holding unprecedented power.</h2>
+		<!-- <span class="chapter-num">01</span> -->
+		<div class="section-label">Belief</div>
+		<h2>Building is core<br />to <span class="hand-underline">humanity</span>.</h2>
+		<div class="flipbook-zone">
+			<span class="flipbook-label">✦ flipbook animation here</span>
+		</div>
+		<p class="body-text">
+			I believe everyone is a builder in some way, shape, or form. I love learning about people's
+			passions and how they build to support their ideas. Even more, I love building to support what <em
+				>I</em
+			> believe in.
+		</p>
+		<!-- <h2>Being a builder in tech<br />means holding unprecedented power.</h2> -->
 		<!-- <blockquote class="pull-quote">
 			"What you do is not important. It is who you do it for, and why, that matters."
 		</blockquote> -->
+		<br />
 		<p class="body-text">
 			Technologists have an ethical duty and social obligation to build with impact in mind. Impact
 			on the individual user, on society, on the environment. Technology changes the world for
@@ -339,11 +333,10 @@
 	</div>
 </section>
 
-<!-- 05 ABOUT -->
-<section class="section about" id="s4">
+<!-- 05 EXPERIENCE -->
+<section class="section experience" id="s4-exp">
 	<div class="section-inner">
-		<div class="section-label">about</div>
-		<h2>The person<br />behind the work.</h2>
+		<div class="section-label">Experience</div>
 
 		<p class="body-text">
 			I'm a 2026 Drexel graduate with a BS in User Experience and Interaction Design. Five years, a
@@ -416,7 +409,7 @@
 			</div>
 		</div>
 
-		<div class="contact-row">
+		<div class="contact-row" id="contact">
 			<a href="mailto:max.wix@drexel.edu" class="contact-link">
 				<span class="contact-label">email</span>
 				max.wix@drexel.edu
@@ -554,6 +547,10 @@
 	}
 
 	/* ─── HERO LAYOUT ─── */
+	.hero {
+		height: 80vh !important;
+	}
+
 	.hero-layout {
 		display: flex;
 		align-items: center;
@@ -583,7 +580,7 @@
 
 	.hero-tag {
 		font-family: 'Caveat', cursive;
-		font-size: 14px;
+		font-size: 16px;
 		color: var(--moss);
 		letter-spacing: 1.5px;
 		margin-bottom: 14px;
@@ -1134,8 +1131,8 @@
 		}
 	}
 
-	/* ─── ABOUT SECTION ─── */
-	.about {
+	/* ─── experience SECTION ─── */
+	.experience {
 		background: var(--warm-white);
 		align-items: flex-start;
 		padding-top: 120px;

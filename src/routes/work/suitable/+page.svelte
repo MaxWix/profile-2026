@@ -1,6 +1,7 @@
 <script>
 	import { onMount } from 'svelte';
 	import Aside from '$lib/components/Aside.svelte';
+	import BackToWork from '$lib/components/BackToWork.svelte';
 
 	const solutionImages = [
 		{ src: '/leaderboard-new-top3.png', caption: 'Podium Finish — top 3 treatment' },
@@ -47,7 +48,7 @@
 <div class="progress-bar" id="progress"></div>
 
 <nav class="top-nav">
-	<a href="/" class="nav-back">back to work</a>
+	<BackToWork />
 	<span class="nav-name">Max</span>
 </nav>
 

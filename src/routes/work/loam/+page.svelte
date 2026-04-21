@@ -1,5 +1,6 @@
 <script>
 	import { onMount } from 'svelte';
+	import BackToWork from '$lib/components/BackToWork.svelte';
 
 	onMount(() => {
 		const sections = document.querySelectorAll('.cs-section');
@@ -32,7 +33,7 @@
 <div class="progress-bar" id="progress"></div>
 
 <nav class="top-nav">
-	<a href="/" class="nav-back">back to work</a>
+	<BackToWork />
 	<span class="nav-name">Max</span>
 </nav>
 
