@@ -1,5 +1,7 @@
 <script>
 	import { onMount } from 'svelte';
+	import BackToWork from '$lib/components/BackToWork.svelte';
+	import ViewAllWork from '$lib/components/ViewAllWork.svelte';
 
 	const solutionImages = [
 		{ src: '/kims/kimsPersona1.jpg' },
@@ -42,8 +44,8 @@
 <div class="progress-bar" id="progress"></div>
 
 <nav class="top-nav">
-	<a href="/" class="nav-back">back to work</a>
-	<span class="nav-name">Max</span>
+	<BackToWork />
+	<span class="nav-name">Max Wix</span>
 </nav>
 
 <!-- ─── HERO ─── -->
@@ -92,12 +94,12 @@
 			<span class="eyebrow-line"></span>
 			<span class="eyebrow-label">Context</span>
 		</div>
-		<h2>A food truck worth<br />waiting in line for —<br />until you don't have to.</h2>
+		<h2>A food truck worth<br />waiting in line for...<br />until you don't have to.</h2>
 		<p class="body-text">
 			Behind Drexel University's Main Building, a long line of food trucks serve West Philadelphia.
 			Kim's Dragon stands out with its diverse and delicious Asian cuisine, attracting a mix of
-			college students and locals. Our team — captivated by the truck's food and friendly staff —
-			set out to design a mobile take-out app.
+			college students and locals. Our team, captivated by the truck's food and friendly staff, set
+			out to design a mobile take-out app.
 		</p>
 		<p class="body-text">
 			Our goal went beyond making the ordering process efficient. We wanted to capture the vibrant
@@ -119,7 +121,7 @@
 		</div>
 		<h2>Late to digital.<br />Long on <span class="hand-underline">lines</span>.</h2>
 		<p class="body-text">
-			Kim's Dragon had no digital ordering solution. The lines were long — sometimes insufferable.
+			Kim's Dragon had no digital ordering solution. The lines were long and sometimes insufferable.
 			Our main challenge was to offer a solution that helped customers skip the wait while helping
 			Kim's Dragon adapt to an unavoidable digital age.
 		</p>
@@ -161,9 +163,9 @@
 		</div>
 		<h2>Observational testing<br />and field interviews.</h2>
 		<p class="body-text">
-			Our first point of action was observational testing and field interviews at Kim's Dragon —
-			understanding who actually uses this truck and what their ordering experience looks like in
-			the real world.
+			Our first point of action was conduction observational testing and field interviews at Kim's
+			Dragon. We aimed to understand who visits the truck and what their ordering experience looks
+			like in the real world.
 		</p>
 		<p class="body-text">
 			From several days of fieldwork we developed three distinct user personas representing the
@@ -221,9 +223,9 @@
 		</div>
 
 		<p class="body-text">
-			We also mapped a user journey for Sarah Parker — a composite of our most time-constrained
-			persona — tracking her emotions and actions through the full ordering experience. This
-			illuminated exactly where frustration peaked and where a mobile solution could intervene.
+			We also mapped a user journey for Sarah Parker: a composite of our most time-constrained
+			persona. Tracking her emotions and actions through the full ordering experience illuminated
+			exactly where frustration peaked and where a mobile solution could intervene.
 		</p>
 
 		<div class="case-img-wrap">
@@ -249,7 +251,7 @@
 			also something anyone could pick up and use immediately.
 		</p>
 		<p class="body-text">
-			We built out prototypes for each step of ordering the Sesame Chicken — a task specific enough
+			We built out prototypes for each step of ordering the Sesame Chicken, a task specific enough
 			to create a real testing environment.
 		</p>
 
@@ -279,7 +281,7 @@
 				<div>
 					<div class="solution-title">"View All" confused users</div>
 					<div class="solution-body">
-						The copy wasn't clear enough — users weren't sure it would lead to the full menu. Label
+						The copy wasn't clear enough. Users weren't sure it would lead to the full menu. Labels
 						needed to be updated to make the action explicit.
 					</div>
 				</div>
@@ -306,7 +308,7 @@
 		</div>
 		<h2>Color, imagery,<br />and new friction.</h2>
 		<p class="body-text">
-			With low-fi feedback in hand, we upgraded to mid-fidelity — adding color, images, and
+			With low-fi feedback in hand, we upgraded to mid-fidelity: adding color, images, and
 			iconography. This was when the harder design problems started to surface.
 		</p>
 
@@ -376,8 +378,8 @@
 		<h2>All we learned,<br />made real.</h2>
 		<p class="body-text">
 			Incorporating everything from two rounds of testing, we built our high-fidelity prototype. One
-			key addition: a third color — hot pink — introduced specifically to signal important functions
-			and guide users through critical moments.
+			key addition: a third color, hot pink, was introduced specifically to signal important
+			functions and guide users through critical moments.
 		</p>
 
 		<div class="case-img-wrap">
@@ -396,7 +398,7 @@
 				<div>
 					<div class="solution-title">Core tasks were intuitive</div>
 					<div class="solution-body">
-						Resoundingly positive feedback — none of our testers struggled to find their way around.
+						Resoundingly positive feedback. None of our testers struggled to find their way around.
 						Ordering felt familiar and easy.
 					</div>
 				</div>
@@ -443,23 +445,23 @@
 			<div class="insight-card" data-num="feature 01">
 				<div class="insight-title">Live queue status</div>
 				<div class="insight-body">
-					Real-time and estimated wait times — informed by current order volume and time of day —
-					gave customers the context they needed to decide when and whether to order.
+					Real-time and estimated wait times, informed by current order volume and time of day, gave
+					customers the context they needed to decide when and whether to order.
 				</div>
 			</div>
 			<div class="insight-card" data-num="feature 02">
 				<div class="insight-title">Order ahead</div>
 				<div class="insight-body">
 					The core value proposition. Users with tight schedules could order ahead and pick up
-					without ever joining the line — a genuine improvement over the existing experience.
+					without ever joining the line, a genuine improvement over the existing experience.
 				</div>
 			</div>
 			<div class="insight-card" data-num="lesson">
 				<div class="insight-title">Details are never small</div>
 				<div class="insight-body">
-					A slightly off button height. A less-than-smooth page transition. Users noticed — and
-					those details became more memorable than the parts they enjoyed. Good design is what's
-					absent from the conversation.
+					A slightly off button height. A less-than-smooth page transition. Users noticed. And those
+					details became more memorable than the parts they enjoyed. Good design is what's absent
+					from the conversation.
 				</div>
 			</div>
 		</div>
@@ -470,7 +472,7 @@
 		</blockquote>
 
 		<p class="body-text">
-			This project taught us that mental models and personality aren't in conflict — but you have to
+			This project taught me that mental models and personality aren't in conflict, but you have to
 			earn the personality by getting the fundamentals right first. By the end of the term, we had
 			both.
 		</p>
@@ -478,11 +480,7 @@
 </div>
 
 <!-- ─── NEXT PROJECT ─── -->
-<div class="next-project">
-	<div class="next-label">next case study</div>
-	<h2>What else has Max built?</h2>
-	<a href="/" class="next-btn">View all work →</a>
-</div>
+<ViewAllWork />
 
 <style>
 	* {

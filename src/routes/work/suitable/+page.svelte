@@ -2,6 +2,7 @@
 	import { onMount } from 'svelte';
 	import Aside from '$lib/components/Aside.svelte';
 	import BackToWork from '$lib/components/BackToWork.svelte';
+	import ViewAllWork from '$lib/components/ViewAllWork.svelte';
 
 	const solutionImages = [
 		{ src: '/leaderboard-new-top3.png', caption: 'Podium Finish — top 3 treatment' },
@@ -247,10 +248,10 @@
 				</div>
 			</div>
 		</div>
-		<div class="img-placeholder short">
+		<!-- <div class="img-placeholder short">
 			<span class="placeholder-icon">⊞</span>
 			<span class="placeholder-label">Affinity map / synthesis board from discovery</span>
-		</div>
+		</div> -->
 	</section>
 
 	<!-- 03 SOLUTIONING -->
@@ -370,10 +371,10 @@
 			everything made it. The features that survived were the ones that directly addressed the three
 			core pain points discovered in research.
 		</p>
-		<div class="img-placeholder medium">
+		<!-- <div class="img-placeholder medium">
 			<span class="placeholder-icon">⬡</span>
 			<span class="placeholder-label">Effort / impact matrix — shaping decisions</span>
-		</div>
+		</div> -->
 		<p class="body-text">
 			Concessions were made. Features deferred. But the shape we landed on was clean, defensible,
 			and buildable within the constraints we had.
@@ -421,11 +422,7 @@
 </div>
 
 <!-- ─── NEXT PROJECT ─── -->
-<div class="next-project">
-	<div class="next-label">next case study</div>
-	<h2>What else has Max built?</h2>
-	<a href="/" class="next-btn">View all work →</a>
-</div>
+<ViewAllWork />
 
 <style>
 	* {

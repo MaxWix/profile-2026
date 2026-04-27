@@ -288,7 +288,7 @@
 		<!-- <div class="flipbook-zone">
 			<span class="flipbook-label">✦ flipbook animation here</span>
 		</div> -->
-		<p class="body-text">
+		<p class="body-text builder-text">
 			I believe everyone is a builder in some way, shape, or form. I love learning about people's
 			passions and how they build to support their ideas. Even more, I love building to support what <em
 				>I</em
@@ -539,6 +539,10 @@
 		position: relative;
 		z-index: var(--z-base);
 		max-width: var(--max-width-content);
+	}
+
+	.builder-text {
+		margin-bottom: var(--space-3);
 	}
 
 	/* ─── HERO ─── */

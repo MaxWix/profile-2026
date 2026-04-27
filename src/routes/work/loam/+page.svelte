@@ -1,6 +1,7 @@
 <script>
 	import { onMount } from 'svelte';
 	import BackToWork from '$lib/components/BackToWork.svelte';
+	import ViewAllWork from '$lib/components/ViewAllWork.svelte';
 
 	onMount(() => {
 		const sections = document.querySelectorAll('.cs-section');
@@ -34,7 +35,7 @@
 
 <nav class="top-nav">
 	<BackToWork />
-	<span class="nav-name">Max</span>
+	<span class="nav-name">Max Wix</span>
 </nav>
 
 <!-- ─── HERO ─── -->
@@ -517,24 +518,13 @@
 			</div>
 		</div>
 
-		<div class="img-placeholder tall">
-			<span class="placeholder-icon">⌗</span>
-			<span class="placeholder-label">Final product screens — key flows</span>
-		</div>
-
-		<div class="img-grid-3">
-			<div class="img-placeholder medium">
-				<span class="placeholder-icon">◉</span>
-				<span class="placeholder-label">Interest-based profile</span>
-			</div>
-			<div class="img-placeholder medium">
-				<span class="placeholder-icon">◉</span>
-				<span class="placeholder-label">Chronological feed</span>
-			</div>
-			<div class="img-placeholder medium">
-				<span class="placeholder-icon">◉</span>
-				<span class="placeholder-label">Branches</span>
-			</div>
+		<div class="case-img-wrap">
+			<img
+				src="/loam-final-screens.png"
+				alt="Screenshot of the final product screens"
+				class="case-img"
+			/>
+			<span class="case-img-caption">Final Product Screens</span>
 		</div>
 	</section>
 
@@ -682,11 +672,7 @@
 </div>
 
 <!-- ─── NEXT PROJECT ─── -->
-<div class="next-project">
-	<div class="next-label">next case study</div>
-	<h2>What else has Max built?</h2>
-	<a href="/" class="next-btn">View all work →</a>
-</div>
+<ViewAllWork />
 
 <style>
 	* {
@@ -1223,44 +1209,6 @@
 		width: 1px;
 		background: rgba(255, 255, 255, 0.1);
 		align-self: stretch;
-	}
-
-	/* ─── NEXT ─── */
-	.next-project {
-		background: var(--sand);
-		padding: 80px 48px;
-		text-align: center;
-	}
-	.next-label {
-		font-family: 'Caveat', cursive;
-		font-size: 15px;
-		color: var(--stone);
-		letter-spacing: 2px;
-		text-transform: uppercase;
-		margin-bottom: 16px;
-	}
-	.next-project h2 {
-		font-size: clamp(28px, 5vw, 48px);
-		font-weight: 400;
-		letter-spacing: -1px;
-		margin-bottom: 28px;
-	}
-	.next-btn {
-		display: inline-block;
-		font-family: 'Caveat', cursive;
-		font-size: 18px;
-		color: var(--bark);
-		border: 1.5px solid var(--bark);
-		padding: 12px 32px;
-		border-radius: 100px;
-		text-decoration: none;
-		cursor: pointer;
-		background: none;
-		transition: all 0.25s ease;
-	}
-	.next-btn:hover {
-		background: var(--bark);
-		color: var(--warm-white);
 	}
 
 	/* ─── RESPONSIVE ─── */
