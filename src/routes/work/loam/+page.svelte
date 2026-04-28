@@ -27,7 +27,7 @@
 </script>
 
 <svelte:head>
-	<title>Loam — Max's Portfolio</title>
+	<title>Loam — Max Wix</title>
 </svelte:head>
 
 <div class="grain"></div>

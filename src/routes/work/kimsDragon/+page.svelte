@@ -37,7 +37,7 @@
 </script>
 
 <svelte:head>
-	<title>Kim's Dragon — Max's Portfolio</title>
+	<title>Kim's Dragon — Max Wix</title>
 </svelte:head>
 
 <div class="grain"></div>

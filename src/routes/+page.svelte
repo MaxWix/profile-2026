@@ -107,6 +107,10 @@
 	});
 </script>
 
+<svelte:head>
+	<title>Max Wix</title>
+</svelte:head>
+
 <div class="grain"></div>
 <div class="progress-bar" id="progress"></div>
 
