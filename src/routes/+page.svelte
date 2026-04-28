@@ -314,7 +314,7 @@
 		<h2>Where I've Built</h2>
 		<p class="body-text">
 			I'm a 2026 Drexel graduate with a BS in User Experience and Interaction Design. Five years, a
-			3.68 GPA, concentrations in sociology, photography, business law, and culinary arts.
+			3.66 GPA, concentrations in sociology, photography, business law, and culinary arts.
 		</p>
 
 		<div class="exp-list">
