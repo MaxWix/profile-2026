@@ -6,17 +6,17 @@
 	let activeCard = null;
 	const loamBubbles = [
 		// LEFT SIDE
-		{ type: 'text', text: "Dunbar's number", x: -50, y: -55, delay: 0 },
+		{ type: 'text', text: 'Ethical Technology', x: -50, y: -55, delay: 0 },
 		{ type: 'img', src: '/loam-logo.jpg', x: -18, y: 10, delay: 0.12 },
-		{ type: 'text', text: 'Algorithm free', x: -22, y: 95, delay: 0.24 },
-		{ type: 'img', src: '/loam-desirability-1.png', x: -45, y: 80, delay: 0.36 },
-		{ type: 'img', src: '/loam-logo.jpg', x: -55, y: 0, delay: 0.48 },
+		{ type: 'text', text: 'Product Management', x: -22, y: 95, delay: 0.24 },
+		{ type: 'img', src: '/loam-preview-1.png', x: -45, y: 80, delay: 0.36 },
+		{ type: 'img', src: '/loam-preview-2.png', x: -55, y: 0, delay: 0.48 },
 		// RIGHT SIDE
 		{ type: 'img', src: '/loam-product-screens.jpg', x: 107, y: -45, delay: 0.06 },
 		{ type: 'text', text: 'Connection limit: 150', x: 140, y: 30, delay: 0.18 },
-		{ type: 'img', src: '/loam-desirability-2.png', x: 110, y: 60, delay: 0.3 },
+		{ type: 'img', src: '/loam-preview-3.png', x: 110, y: 60, delay: 0.3 },
 		{ type: 'text', text: 'Algorithm free', x: 135, y: 100, delay: 0.42 },
-		{ type: 'img', src: '/loam-product-screens.jpg', x: 107, y: 140, delay: 0.54 }
+		{ type: 'img', src: '/loam-preview-4.png', x: 107, y: 140, delay: 0.54 }
 	];
 
 	const suitableBubbles = [
@@ -369,7 +369,7 @@
 						<div class="exp-role">Production Manager & Lead Print Designer</div>
 						<div class="exp-company">The Triangle</div>
 					</div>
-					<div class="exp-date">Dec 2022 – Jan 2025</div>
+					<div class="exp-date">Dec 2022 - Jan 2025</div>
 				</div>
 				<div class="exp-body">
 					Managed ~80 staff through all aspects of newsprint production. Designed a production
@@ -941,14 +941,13 @@
 		}
 
 		.case-card {
-			grid-template-columns: 60px 1fr 20px;
+			grid-template-columns: 1fr 20px;
 			gap: var(--space-4);
 			padding: var(--space-4);
 		}
 
 		.case-visual {
-			width: 60px;
-			height: 50px;
+			display: none;
 		}
 
 		.exp-header {
